@@ -22,7 +22,7 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
           git config pull.rebase false
-          git pull https://github.com/abhndv/gh-actions-2.git branch-a
+          git pull https://${{ secrets.GH_PAT }}@github.com/abhndv/gh-actions-2.git branch-a
           git push
           
       - name: Pushing changes 
