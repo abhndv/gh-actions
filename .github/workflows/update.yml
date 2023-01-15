@@ -27,6 +27,8 @@ jobs:
 
       - name: Pulling from gh-actions-2 branch-a
         run: |
+          git config --global user.email "<>"
+          git config --global user.name "Github Actions"
           git config pull.rebase false
           git remote add master-repo https://github.com/abhndv/gh-actions-2.git
           git pull master-repo branch-a --allow-unrelated-histories
