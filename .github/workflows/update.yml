@@ -22,6 +22,7 @@ jobs:
           repository: abhndv/gh-actions-2
           ref: branch-a
           token: ${{ secrets.GH_PAT }}
+          clean: false
 
 #       - name: Pulling from gh-actions-2 branch-a
 #         run: |
