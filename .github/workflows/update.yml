@@ -27,12 +27,11 @@ jobs:
 
       - name: Pulling from gh-actions-2 branch-a
         run: |
-          git branch
+          git config pull.rebase false
           git remote add master-repo https://github.com/abhndv/gh-actions-2.git
           git pull master-repo branch-a
           
-      - name: Pushing changes 
+      - name: Pushing changes to gh-actions branch-a
         run: |
-          git branch
           git push
       
