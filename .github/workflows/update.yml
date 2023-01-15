@@ -29,7 +29,7 @@ jobs:
         run: |
           git config pull.rebase false
           git remote add master-repo https://github.com/abhndv/gh-actions-2.git
-          git pull master-repo branch-a
+          git pull master-repo branch-a --allow-unrelated-histories
           
       - name: Pushing changes to gh-actions branch-a
         run: |
