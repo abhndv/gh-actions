@@ -16,20 +16,20 @@ jobs:
         with:
           ref: branch-b #branch name to which the Repo A to be merged
           
-      - name: Checkout the private repo node-boilerplate
-        uses: actions/checkout@v3
-        with:
-          repository: abhndv/gh-actions-2
-          ref: branch-a
-          token: ${{ secrets.GH_PAT }}
+#       - name: Checkout the private repo node-boilerplate
+#         uses: actions/checkout@v3
+#         with:
+#           repository: abhndv/gh-actions-2
+#           ref: branch-a
+#           token: ${{ secrets.GH_PAT }}
 
-#       - name: Pulling from gh-actions-2 branch-a
-#         run: |
-#           git pull https://@github.com/abhndv/gh-actions-2.git branch-a
+      - name: Pulling from gh-actions-2 branch-a
+        run: |
+          git pull https://abhndv:${{secrets.GH_PAT}}@github.com/abhndv/gh-actions-2.git branch-a
           
       - name: Pushing changes 
         run: |
-          git switch branch-b
+          git switch origin/branch-b
           git merge branch-a
           git push
       
