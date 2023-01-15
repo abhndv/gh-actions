@@ -16,7 +16,7 @@ jobs:
         with:
           ref: branch-b #branch name to which the Repo A to be merged
           
-      - name: Checkout the private repo node-boilerplate
+      - name: Checkout the private gh-actions-2 branch-1
         uses: actions/checkout@v3
         with:
           repository: abhndv/gh-actions-2
@@ -29,7 +29,7 @@ jobs:
           
       - name: Pushing changes 
         run: |
-          echo git branch
+          git branch
           git switch origin/branch-b
           git merge branch-a
           git push
